@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Army Login - Highly Classified</title>
+    
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2c6b2f, #1b4d2a); /* Green and Dark Green Gradient */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .login-panel {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .counter {
+            font-size: 2rem;
+            color: yellow;
+        }
+
+        .counter-container {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .counter-label {
+            font-size: 18px;
+        }
+
+        audio {
+            display: none;
+        }
+
+        .right-hand-raiser {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .right-hand-raiser:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Audio (hidden, will play via button click) -->
+    <audio id="background-audio" loop>
+        <source src="poop.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Quotes -->
+    <div>
+        <p class="quote">"Violence is never the answer. It's a question, and the answer is yes." - Technoblade</p>
+        <p class="quote">"Robux ka dhanda chalta rahe." - Ishan</p>
+    </div>
+
+    <!-- Counter Display -->
+    <div class="counter-container">
+        <div>
+            <span class="counter-label">Kaddu Gas Victims: </span>
+            <span id="kaddu-counter" class="counter">69</span>
+        </div>
+        <div>
+            <span class="counter-label">Art School Rejections: </span>
+            <span id="art-counter" class="counter">420</span>
+        </div>
+    </div>
+
+    <!-- Login Panel -->
+    <div class="login-panel">
+        <h1>Welcome Home Soldier</h1>
+        
+        <!-- Login Form -->
+        <form id="login-form" action="page2.html" method="get">
+            <div class="form-group">
+                <label for="username">Name:</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Top Secret Password:</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter the Code" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enter the Army Base</button>
+        </form>
+        
+        <!-- Right Hand Raiser Button to Start Audio -->
+        <a href="javascript:void(0);" class="right-hand-raiser" onclick="startAudio()">Right Hand Raiser</a>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Counter JavaScript -->
+    <script>
+        let kadduCount = 69;
+        let artCount = 420;
+
+        function updateCounters() {
+            kadduCount++;
+            artCount++;
+
+            document.getElementById('kaddu-counter').textContent = kadduCount;
+            document.getElementById('art-counter').textContent = artCount;
+        }
+
+        setInterval(updateCounters, 1000); // Update every second
+
+        // Function to start the audio when the button is clicked
+        function startAudio() {
+            var audio = document.getElementById('background-audio');
+            audio.play(); // Start playing the audio
+        }
+    </script>
+</body>
+</html>

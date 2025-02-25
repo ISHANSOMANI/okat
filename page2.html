@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrapbook for Saket</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2c6b2f, #1b4d2a); /* Green and Dark Green Gradient */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .scrapbook {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .photo {
+            width: 250px;
+            height: 250px;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+        
+        .photo1 {
+            width: 1100px;
+            height: 500px;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+        
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .letter {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 60%;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .back-button {
+            margin-top: 50px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scrapbook Photos -->
+    <div class="scrapbook">
+        <div class="photo"><img src="photo1.jpg" alt="Photo 1"></div>
+        <div class="photo"><img src="photo2.jpg" alt="Photo 2"></div>
+        <div class="photo"><img src="photo3.jpg" alt="Photo 3"></div>
+        <div class="photo"><img src="photo4.jpg" alt="Photo 4"></div>
+        <div class="photo"><img src="photo5.jpg" alt="Photo 5"></div>
+        <div class="photo1"><img src="photo6.jpg" alt="Photo 6"></div>
+    </div>
+
+    <!-- Letter -->
+    <div class="letter">
+        <p>To Saket,</p>
+        <p>April of 2022, I had been deep into enemy lines in the sewers of DAV. It was my first undercover task. There were all kinds of soldiers in the stronghold — sting drinkers, wannabe gangsters, weird people, and Nikhil. You were different, soldier. You were awkward and stuttered, so I became friends with you and got to know that even DAV has normal people.</p>
+        <p>Ever since the day I became friends with you, I gained a little trust in the sewer and decided to become neutral, not give a shit about any side, and make tons of friends. Real friends. You're the first of the league, brother.</p>
+        <p>By, Ishan</p>
+        <p>I still have that photo of you in the bus sleeping.</p>
+    </div>
+    <audio id="audio" src="funny.mp3" preload="auto"></audio>
+    <button class="important-btn" onclick="playAudio()">An Important Message</button>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
+    <!-- Back to Login Button -->
+    <a href="index.html" class="back-button">Back to Login</a>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr
